@@ -11,6 +11,8 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def get_params(text):
     """请求时间戳（秒级），用于防止请求重放（保证签名5分钟有效）"""
